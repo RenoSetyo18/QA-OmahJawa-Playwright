@@ -29,7 +29,7 @@ export default defineConfig({
     baseURL: "http://127.0.0.1:8000",
 
     // Supaya browser-nya kelihatan di layar saat test berjalan (bagus untuk pemula)
-    headless: false,
+    headless: !process.env.CI,
     trace: "on-first-retry",
   },
 
